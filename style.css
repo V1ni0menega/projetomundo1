@@ -1,0 +1,250 @@
+/* Fonte personalizada */
+@font-face {
+  font-family: 'idroid';
+  src: url('fontes/idroid.otf') format('opentype');
+}
+
+/* Reset e ajustes básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo com fundo neutro */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Estilo geral da "caixa" */
+.caixa {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 9px 7px 9px 5px #ffffff;
+  transition: border-radius 0.5s ease;
+}
+
+.caixa:hover {
+  border-radius: 40px;
+}
+
+/* Parágrafos */
+p {
+  margin: 15px 0;
+  text-align: justify;
+  text-indent: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  line-height: 2em;
+}
+
+/* Links */
+a {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+a.externo::after {
+  content: '\00A0\1F517'; /* ícone de link externo */
+}
+
+/* Títulos */
+h2 {
+  font-size: 20px;
+  font-family: 'idroid', sans-serif;
+  text-indent: 30px;
+  color: #1b5e20;
+  background-image: linear-gradient(to right, green, transparent);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: #00c853;
+  transition: width 0.4s ease-in-out;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(to bottom, #00c853, #023E19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header > h1 {
+  font-size: 25px;
+}
+
+header > p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+/* Navegação */
+nav {
+  background-color: #023E19;
+  padding: 10px 30px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+}
+
+nav > a {
+  background-color: #014A1E;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+nav > a:hover {
+  background-color: #042211;
+  box-shadow: 0px 5px 10px #00e676, 0 0 20px #00e676;
+  transform: scale(1.05);
+}
+
+nav > a::after {
+  content: "_";
+  opacity: 2;
+  transform: translateX(-5px);
+  transition: all 0.5s ease;
+  position: absolute;
+}
+
+/* Container principal */
+main {
+  padding: 20px;
+  min-width: 300px;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: rgb(126, 173, 126);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(165, 12, 12, 0.1);
+  border: 5px solid #388e3c;
+  animation: aparecer 1s ease-in-out;
+}
+
+main strong {
+
+  font-weight: bolder;
+  color: #000000;
+}
+
+main a {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: green;
+  padding: 2px 6px;
+  color: #388e3c;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: white;
+}
+img:hover {
+  transition: transform 0.9s ease;
+  transform: scale(1.05);
+  position: relative; /* necessário para o z-index funcionar */
+  z-index: 5;         /* valor maior que os elementos ao redor */
+}
+
+/* Imagens */
+img{
+  box-shadow: 10px 7px 8px rgb(255, 255, 255);
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  ;
+}
+
+.bugdroid {
+  width: 50%;
+}
+div.picture{
+  box-shadow: 0 2px 8px rgba(165, 12, 12, 0.3); /* sombra mais visível */
+  background-color: white;
+}
+div.video {
+  background-color: #1b5e20;
+  margin: 0px -20px 30px -20px;
+  padding-bottom: 60%; /* proporção 16:9 */
+  position: relative;
+  height: 0; /* necessário para ativar o padding como proporção */
+}
+
+
+div.video > iframe {
+  position: absolute;
+  top: 4.5%;
+  left: 4.5%;
+  width: 90%;
+  height: 90%;
+  border: none;
+}
+/* Box lateral */
+.extra {
+  background-color: #c5ebd6;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.extra h3 {
+  background-color: #2fa866;
+  color: white;
+  padding: 10px;
+  margin: -15px -15px 10px -15px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Lista dupla */
+.lista-dupla {
+  columns: 2;
+  list-style-type: '✔ ';
+  padding-left: 20px;
+  margin: 10px 2px;
+}
+
+.lista-dupla li {
+  margin: 5px 0;
+}
+
+/* Rodapé */
+footer {
+  font-size: 0.9em;
+  text-align: center;
+  padding: 5px;
+  background-color: green;
+  color: white;
+}
+
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
