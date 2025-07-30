@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: url(../imagens/fundo-tela.jpg) repeat-x;
+    background-size: cover;
+    animation: moverFundo 30s linear infinite;}
+
+@keyframes moverFundo 
+{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+
+main {
+    height: 100vh;
+    position: relative;
+}
+
+section#telefone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 627px;
+    width: 311px;
+    background-color: blue;
+    transform: translate(-50%, -50%);
+    background: url('../Imagens/frame-android.png') no-repeat top center;
+    background-size: cover;
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 270px;
+    height: 383px;
+}
+
+section#redes-sociais {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+}
+
+section#redes-sociais img {
+    width: 60px;
+    border-radius: 100px;
+    /* ou 50% */
+    margin: 10px;
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgb(124, 87, 87);
+    transform: translate(-6px, -6px);
+    box-shadow: 5px 5px 10px;
+    transition: 0.5s;
+}
